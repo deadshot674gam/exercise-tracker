@@ -1,0 +1,57 @@
+{
+  "name": "exercise-tracker",
+  "version": "1.0.0",
+  "description": "A MERN Stack project to track exercise",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.3.0",
+    "@testing-library/user-event": "13.5.0",
+    "express": "^4.18.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "web-vitals": "2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadshot674gam/exercise-tracker.git"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "react",
+    "nodejs",
+    "expressjs",
+    "exercise-tracker"
+  ],
+  "author": "Divyanshu Tiwari",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/deadshot674gam/exercise-tracker/issues"
+  },
+  "homepage": "https://github.com/deadshot674gam/exercise-tracker#readme",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
