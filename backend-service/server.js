@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import LOGGER from './lib/logger.js';
-import RedisClient from './lib/redisclient.js';
+import LOGGER from './lib-js/logger.js';
+import RedisClient from './lib-js/redisclient.js';
 
 dotenv.config();
 
@@ -14,6 +14,11 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/',(request, response)=>{
+    response.send("Hello World! this is redis gui")
+    LOGGER.info("This is root route");
+})
 
 app.get('/loginToRedis',(request,response)=>{
     request = request["query"]
@@ -37,7 +42,7 @@ app.get('/loginToRedis',(request,response)=>{
                 password: request["password"]
             })
 
-
+            
 
             response.status(200).send({
                 message: `Connected successfully with redis host ${request["hostname"]}`
@@ -85,6 +90,7 @@ app.get('/selectIndex',(request,response)=>{
             }
 
         }else{
+            LOGGER.info(`redisclient is of type ${typeof redisclient}`)
             response.status(404).send({
                 message: "This request is invalid until host connection is established are provided"
             })

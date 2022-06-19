@@ -8,12 +8,13 @@
     "dotenv": "^16.0.1",
     "express": "4.18.1",
     "log4js": "^6.5.2",
+    "nodemon": "^2.0.16",
     "redis": "4.1.0"
   },
   "type": "module",
   "scripts": {
-    "start": "node main",
-    "test": "node main"
+    "start": "node backend-service/server.js",
+    "test": "nodemon backend-service/server.js"
   },
   "repository": {
     "type": "git",
